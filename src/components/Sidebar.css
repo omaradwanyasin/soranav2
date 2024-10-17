@@ -1,0 +1,113 @@
+.sidebar {
+  position: fixed; /* Fixed position to stay on the left */
+  top: 50%; /* Center vertically */
+  left: 0;
+  transform: translateY(-50%); /* Adjust to center */
+  width: 60px; /* Width of the sidebar */
+  background-color: rgba(44, 47, 63, 0.9); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 0; /* Padding for top and bottom */
+  cursor: move; /* Change cursor to indicate draggable */
+}
+
+.sidebar ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.sidebar li {
+  margin: 15px 0; /* Space between items */
+}
+
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  display: flex; /* Flexbox for icon */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.sidebar a:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+.icon {
+  width: 30px; /* Set a fixed width for icons */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px 0; /* Space between icons */
+}
+
+/* Styles for the add site button */
+
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 2000; /* Ensure it stays above other content */
+}
+
+/* Modal content styles */
+.modal-content {
+  background-color: white; /* White background for modal */
+  padding: 20px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  width: 400px; /* Width of the modal */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  position: relative; /* Relative positioning */
+}
+
+/* Close button styles */
+.close {
+  cursor: pointer; /* Pointer cursor */
+  float: right; /* Float to the right */
+  font-size: 1.5rem; /* Font size */
+  color: #10375c; /* Close button color */
+}
+
+/* Input styles */
+.modal input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  margin: 10px 0; /* Space between inputs */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styles */
+.modal-buttons {
+  display: flex; /* Flexbox for button layout */
+  justify-content: space-between; /* Space between buttons */
+}
+
+.modal button {
+  background-color: #f9dbba; /* Button color */
+  color: #10375c; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  width: 48%; /* Width of buttons */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.modal button:hover {
+  background-color: #e0c49b; /* Darker shade on hover */
+}
+
+/* Additional styling for the modal */
+.modal-content h2 {
+  margin: 0 0 15px; /* Space below heading */
+  font-size: 1.5rem; /* Heading font size */
+  color: #10375c; /* Heading color */
+}

@@ -1,0 +1,73 @@
+/* src/pages/SignUp.css */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%; /* Full viewport height */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding around the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  width: 30%; /* Width of the form */
+}
+
+h1 {
+  color: white; /* Heading color */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+input {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+  color: #333; /* Text color */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+input:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 5px rgba(249, 219, 186, 0.5); /* Add shadow on focus */
+  transform: scale(1.02); /* Slightly scale up on focus */
+}
+
+.signup-button {
+  background-color: #f9dbba; /* Button color */
+  color: #333; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.signup-button:hover {
+  background-color: #e0c49b; /* Darker shade on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.footer {
+  margin-top: 20px; /* Space above footer */
+  color: white; /* Footer text color */
+}
+
+.footer a {
+  color: #f9dbba; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+@media (max-width: 768px) {
+  .signup-container {
+    width: 80%; /* Increase width on mobile */
+  }
+}

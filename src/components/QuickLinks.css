@@ -1,0 +1,28 @@
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.link {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.link p {
+  margin-top: 10px;
+  color: white;
+}
+
+.add-link {
+  font-size: 2rem;
+}

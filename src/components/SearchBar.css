@@ -1,0 +1,56 @@
+/* Base Styles for Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Expanded Search Bar */
+.search-bar.expanded {
+  max-width: 600px; /* Expand width */
+}
+
+/* Input Styles */
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.06rem;
+  color: white;
+}
+
+/* Icon Styling */
+.iconmic {
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Search Button Styling */
+.search-btn {
+  background-color: #f9dbba;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  color: #10375c;
+}
+
+.search-bar:hover {
+  transform: scale(1.05); /* Slight scale effect */
+}
