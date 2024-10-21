@@ -1,23 +1,89 @@
 /* App.css */
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0b192c;
-  font-family: "Arial", sans-serif;
+  background-color: #0a0e17;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
   color: white;
 }
 
 .app {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
-  text-align: center;
 }
 
 .content-wrapper {
-  width: 90%;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
+
+.main-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.token-display {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1e2530;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #00ff99;
+  max-width: 200px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.token-display p {
+  margin: 0;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.token-display strong {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 10px;
+  }
+
+  .token-display {
+    position: fixed; /* Change to fixed positioning */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    margin-bottom: 0; /* Remove margin */
+    font-size: 12px; /* Reduce font size for mobile */
+    padding: 6px 12px; /* Reduce padding for mobile */
+    max-width: 150px; /* Reduce max-width for mobile */
+  }
+
+  .main-content {
+    width: 100%;
+    margin-top: 60px; /* Add top margin to prevent overlap with fixed token display */
+  }
+}
+/* Add styles for other components like SearchBar, QuickLinks, etc. */

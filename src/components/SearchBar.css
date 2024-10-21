@@ -11,6 +11,7 @@
   transition: all 0.3s ease;
   box-sizing: border-box;
   cursor: pointer;
+  border: 2px solid transparent; /* Add transparent border */
 }
 
 /* Expanded Search Bar */
@@ -38,7 +39,7 @@
 
 /* Search Button Styling */
 .search-btn {
-  background-color: #f9dbba;
+  background-color: #00ff99;
   border: none;
   border-radius: 20px;
   padding: 10px;
@@ -53,4 +54,15 @@
 
 .search-bar:hover {
   transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Add focus state for search bar */
+.search-bar:focus-within {
+  border-color: #00ff99; /* Green border color */
+  box-shadow: 0 0 0 2px rgba(0, 255, 153, 0.3); /* Optional: adds a glow effect */
+}
+
+/* Ensure the input doesn't show its own outline */
+.search-input:focus {
+  outline: none;
 }

@@ -80,6 +80,21 @@ body {
   transform: translateY(-5px);
 }
 
+.result-item h3 {
+  color: #ffffff; /* Change to black or any color that contrasts with the background */
+  font-size: 1.5em; /* Adjust font size as needed */
+  margin: 0; /* Remove default margin */
+}
+
+.result-item h3 a {
+  color: inherit; /* Inherit the color from the h3 element */
+  text-decoration: none; /* Remove underline */
+}
+
+.result-item h3 a:hover {
+  text-decoration: underline; /* Optional: underline on hover for better UX */
+}
+
 /* Vote Buttons */
 .vote-buttons {
   display: flex;
@@ -99,7 +114,7 @@ body {
 }
 
 .vote-buttons button:hover {
-  color: #f9dbba;
+  color: #00ff99;
 }
 
 /* AI Rewrite Button */
@@ -118,7 +133,7 @@ body {
 }
 
 .ai-rewrite-btn:hover {
-  background-color: #f9dbba;
+  background-color: #00ff99;
   color: #0b1220;
 }
 
@@ -133,6 +148,68 @@ h3 {
 
 p {
   margin: 5px 0;
+}
+.category-filters {
+  display: flex;
+  justify-content: start; /* Center the category buttons */
+  margin: 1rem 0; /* Add some margin */
+}
+
+.category-filters button {
+  background-color: #f8f9fa; /* Light background for category buttons */
+  color: #333; /* Dark text color */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Padding for size */
+  margin: 0 5px; /* Space between buttons */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.category-filters button.active {
+  background-color: #00ff99; /* Active button color */
+  color: white; /* Text color for active button */
+  border: none; /* Remove border for active button */
+}
+
+.category-filters button:hover {
+  background-color: #e9ecef; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.image-item {
+  flex: 1 0 calc(33% - 16px); /* Adjust for responsiveness */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  width: 200px;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+}
+
+.image-item h4 {
+  text-align: center;
+  margin-top: 8px;
+}
+.summary-image {
+  border-radius: 5px;
+}
+.top-images {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Responsive Design */
@@ -181,6 +258,20 @@ p {
     margin-top: 15px;
   }
 }
+.result-image {
+  width: 100%; /* Ensure it fills the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation on hover */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  margin: 10px;
+}
+
+.result-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
 
 /* Large Desktop Screens (min-width: 1200px) */
 @media (min-width: 1200px) {
@@ -195,4 +286,54 @@ p {
   .summary-box {
     height: 35%;
   }
+}
+
+/* Header styling */
+.top-images h4 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Grid container to hold the images */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap; /* Ensures images wrap to the next row when space runs out */
+  justify-content: center; /* Centers the rows horizontally */
+  gap: 15px; /* Space between images */
+  padding: 10px;
+  width: 100%; /* Full width of the parent container */
+  box-sizing: border-box;
+}
+
+/* Each image container */
+.image-container {
+  display: flex;
+  flex-direction: column; /* Ensures the image and title are stacked vertically */
+  align-items: center;
+  width: 120px; /* Same width as the image to keep things consistent */
+}
+
+/* Image styling */
+.summary-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.summary-image:hover {
+  transform: scale(1.05);
+}
+
+/* Title text styling */
+.image-title {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }

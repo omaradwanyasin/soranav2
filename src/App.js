@@ -20,7 +20,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} /> {/* Add SignIn route */}
           <Route path="/signup" element={<SignUp />} /> {/* Add SignUp route */}
           <Route path="/search" element={<Search />} /> {/* Search page */}
-          <Route path="/searchresult" element={<SearchResults />} />
+          <Route path="/searchresults" element={<SearchResults />} />
         </Routes>
       </div>
     </Router>

@@ -16,25 +16,25 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div className="header">
+      <div className="header2">
         <button className="sign-in-button" onClick={handleSignIn}>
-          <span>Sign in</span>
+          <span>sign in</span>
         </button>
       </div>
       <div className="content">
-        <h1>Sorana</h1>
+        <h1>sorana</h1>
         <h1>
-          Be the web. Own the web.
+          be the web. own the web.
           <br />
         </h1>
         <button className="get-started-button" onClick={handleGetStarted}>
-          Get started <span>&rarr;</span>
+          get started <span>&rarr;</span>
         </button>
       </div>
-      <div className="footer">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="/faq">FAQ</a>
+      <div className="footerr">
+        <a href="/privacy">privacy</a>
+        <a href="/terms">terms</a>
+        <a href="/faq">faq</a>
       </div>
     </div>
   );

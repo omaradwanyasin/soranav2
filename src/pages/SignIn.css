@@ -4,70 +4,78 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Full viewport height */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding around the form */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-  width: 30%; /* Width of the form */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 30%;
+  max-width: 400px;
+  min-width: 300px;
 }
 
 h1 {
-  color: white; /* Heading color */
-  margin-bottom: 20px; /* Space below heading */
+  color: white;
+  margin-bottom: 20px;
 }
 
 .form-group {
-  margin-bottom: 15px; /* Space between form groups */
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 input {
-  width: 100%; /* Full width for inputs */
-  padding: 10px; /* Padding inside inputs */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  background: rgba(255, 255, 255, 0.8); /* Light background for inputs */
-  color: #333; /* Text color */
-  transition: all 0.3s ease; /* Smooth transition for focus effect */
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 input:focus {
-  outline: none; /* Remove outline on focus */
-  box-shadow: 0 0 5px rgba(249, 219, 186, 0.5); /* Add shadow on focus */
-  transform: scale(1.02); /* Slightly scale up on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(249, 219, 186, 0.5);
+  transform: scale(1.02);
 }
 
 .signin-button {
-  background-color: #f9dbba; /* Button color */
-  color: #333; /* Button text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 15px; /* Padding for button */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  background-color: #00ff99;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
 }
 
 .signin-button:hover {
-  background-color: #e0c49b; /* Darker shade on hover */
-  transform: scale(1.05); /* Scale up on hover */
+  background-color: #00ff99;
+  transform: scale(1.05);
 }
 
 .footer {
-  margin-top: 20px; /* Space above footer */
-  color: white; /* Footer text color */
+  margin-top: 20px;
+  color: white;
 }
 
 .footer a {
-  color: #f9dbba; /* Link color */
-  text-decoration: none; /* Remove underline */
+  color: #00ff99;
+  text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
+
 @media (max-width: 768px) {
   .signin-container {
-    width: 80%; /* Increase width on mobile */
+    width: 80%;
   }
 }

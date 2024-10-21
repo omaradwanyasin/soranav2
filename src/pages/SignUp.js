@@ -8,18 +8,50 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState(""); // State to hold error messages
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-    // Handle sign-up logic here (e.g., API call)
-    console.log("Signing up with:", { name, email, password, confirmPassword });
-    // Navigate to the home page or another page after sign-up
-    navigate("/"); // Redirect to home after sign-up
+
+    // Prepare the request body
+    const requestBody = {
+      name: name,
+      email: email,
+      password: password,
+    };
+
+    try {
+      // Send POST request to the API
+      const response = await fetch('https://soranaapi.replit.app/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      // Check if the response is ok (status in the range 200-299)
+      if (!response.ok) {
+        throw new Error('Sign-up failed. Please check your details.');
+      }
+
+      // Parse the response data
+      const data = await response.json();
+      console.log("Sign-up successful:", data);
+
+      // Navigate to the sign-in page or another page after sign-up
+      navigate("/signin"); // Redirect to sign-in page after sign-up
+    } catch (error) {
+      console.error("Error during sign-up:", error);
+      setError(error.message); // Set error message to state
+    }
   };
 
   return (
     <div className="signup-container">
       <h1>Sign Up</h1>
+      {error && <p className="error-message">{error}</p>} {/* Display error message */}
       <form onSubmit={handleSignUp}>
         <div className="form-group">
           <input

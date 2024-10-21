@@ -1,29 +1,27 @@
 import React from "react";
-import {
-  FaShieldAlt,
-  FaLock,
-  FaGlobe,
-  FaCheckCircle,
-  FaUsers,
-  FaMoneyBillWave,
-} from "react-icons/fa";
-import "../components/Header.css";
+import { FaCheckCircle, FaUsers, FaMoneyBillWave } from "react-icons/fa";
+import "./Header.css";
 
 function Header() {
   return (
-    <div className="header1">
-      <h1>sorana</h1>
-      <div className="features">
-        <div className="feature">
-          <FaCheckCircle /> <p>real results, no noise</p>
+    <div className="header-wrapper">
+      <header className="header">
+        <h1 className="logo">sorana</h1>
+        <div className="features">
+          <div className="feature">
+            <FaCheckCircle className="feature-icon" />
+            <p className="feature-text">real results, no noise</p>
+          </div>
+          <div className="feature">
+            <FaUsers className="feature-icon" />
+            <p className="feature-text">fully decentralized</p>
+          </div>
+          <div className="feature">
+            <FaMoneyBillWave className="feature-icon" />
+            <p className="feature-text">earn while you search</p>
+          </div>
         </div>
-        <div className="feature">
-          <FaUsers /> <p>fully decentralized</p>
-        </div>
-        <div className="feature">
-          <FaMoneyBillWave /> <p>earn while you search</p>
-        </div>
-      </div>
+      </header>
     </div>
   );
 }
